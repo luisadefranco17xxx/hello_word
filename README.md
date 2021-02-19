@@ -1,12 +1,19 @@
-# hello_word
+echo Was hast du morgen geplant??
+ffffff
+luisa prova
+Was hast du morgen geplant??>>tagebuch.txt
+Was hast du morgen geplant??Was hast du morgen geplant??>>tagebuch.txt
+>>tagebuch.txt
+fdfsddsf
 
-lista comandi
-ssh luisa@zam.chrishofer.net -p 765
+llllLLLLllLLLLLLLjjj
+hhhh
+fdsfdWas hast du morgen geplant??>>tagebuch.txt
+hhhhWas hast du morgen geplant??>>tagebuch.txt
+fg
+Was hast du morgen geplant??>>tagebuch.txt
+Was hast du morgen geplant??>>tagebuch.txt
 
-git clone "https://github.com/luisadefranco17xxx/hello_word/" 
-
-git config pull.rebase false
-
-
-comando da canellare
+aWas hast du morgen geplant??>>tagebuch.txt
+Was hast du morgen geplant??>>tagebuch.txt
 
