@@ -50,7 +50,7 @@ public class Order {
                 '}';*/
     }
 
-    public void addArticle(Article a){
+    public void addArticle(Article a){                           //TODO     sicher falsch gelöst!!!
        Article[] newArticles =new Article[this.articles.length+1];
         for (int i = 0; i < articles.length; i++) {
             newArticles[i]=this.articles[i];
@@ -59,6 +59,61 @@ public class Order {
         this.articles=newArticles;
         this.capacityOrder++;
     }
+
+     public int findMostExpensiveArticle(){
+       double max=0;
+         int maxIndex=-1;
+         for (int i = 0; i < articles.length; i++) {
+             if(this.articles[i].price>max) {
+                 max=this.articles[i].price;
+                 maxIndex=i;
+             }
+         }
+           return maxIndex+1;
+     }
+
+     public int findMostExpensiveOrderPosition(){
+         double maxOrder=0;
+         int maxIndex=-1;
+
+         for (int i = 0; i < articles.length; i++) {
+             if(this.articles[i].price>maxOrder) {
+                 maxOrder=this.articles[i].price*this.nrArticles;   //TODO nnon si capisce per cosa moltiplicare!!!!!
+                 maxIndex=i;
+             }
+         }
+       return maxIndex+1;
+     }
+
+    public double  sumOrder() {
+       double sumOrder=0;
+       for (int i = 0; i < articles.length; i++) {
+           sumOrder+=this.articles[i].price;
+        }
+       return sumOrder;
+    }
+
+    public double  calculateTax() {
+        double sumTax=0;
+        for (int i = 0; i < articles.length; i++) {
+            if (this.articles[i].price<20.0)  { sumTax+=this.articles[i].price*0.05;}
+            else if (this.articles[i].price>=20.0)  { sumTax+=this.articles[i].price*0.2;}
+        }
+        return sumTax;
+    }
+    public double sumOrderWithTax(){
+       return sumOrder()+calculateTax();
+    }
+
+    public void increaseArray (){
+        Article[] newArticles =new Article[this.articles.length+1];
+        for (int i = 0; i < articles.length; i++) {
+            newArticles[i]=this.articles[i];
+        };
+        this.articles=newArticles;    //bleibt letzte platzt->  newArticles[this.articles.length] frei für nächste article
+        this.capacityOrder++;
+    }
+
 
 
     @Override
