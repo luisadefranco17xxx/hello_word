@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EmployeeManager {
-  private List<Employee> myListEmployee =new ArrayList<Employee>() ;
+  private ArrayList<Employee> myListEmployee =new ArrayList<Employee>() ;
 
 
-    public EmployeeManager(List<Employee> myListEmployee) {
+    public EmployeeManager(ArrayList<Employee> myListEmployee) {
         this.myListEmployee = myListEmployee;
     }
 

@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Bunny {
     private String name;
     private  String fav;
@@ -76,4 +78,18 @@ public class Bunny {
                 ", birth='" + birthSeason + '\'' +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Bunny bunny = (Bunny) o;
+        return biD == bunny.biD && name.equals(bunny.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, biD);
+    }
+
 }
