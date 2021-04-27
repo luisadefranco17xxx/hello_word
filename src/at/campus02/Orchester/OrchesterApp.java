@@ -9,16 +9,19 @@ public class OrchesterApp {
 
 
     Orchester orchester=new Orchester();
-    Gitarre g=new Gitarre();
-    Geige geige = new Geige();
-    Trompete t=new Trompete();
+    Gitarre g=new Gitarre(3);
+    Geige geige = new Geige(7);
+    Trompete t=new Trompete(9);
+    Floete f=new Floete(4);
 
-        System.out.println(g);
+    //System.out.println(g);
+    //System.out.println();
     orchester.add(g);
     orchester.add(geige);
     orchester.add(t);
+    orchester.add(f);
 
-        System.out.println("Stärke ganze Orchestra = " + orchester.playAll());;
+    System.out.println("Stärke ganze Orchestra = " + orchester.playAll());;
 
     }
 }

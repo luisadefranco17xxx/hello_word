@@ -1,6 +1,6 @@
 package at.campus02.Orchester;
 
-public class Instrument {
+public abstract class Instrument {
     private int stärke;
 
     public Instrument(int stärke) {
@@ -11,8 +11,6 @@ public class Instrument {
         return stärke;
     }
 
-    public int play(){
-       return stärke;
-   }
+    public abstract int play();
 
 }
