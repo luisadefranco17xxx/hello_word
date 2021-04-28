@@ -56,15 +56,23 @@ public class Holiday implements Comparable<Holiday>{
 
     @Override
     public int compareTo(Holiday o) {
+//        if(this.lengthInDays<o.lengthInDays) {
+//            return -1;
+//        } else if(this.lengthInDays>o.lengthInDays) {
+//            return 1;
+//        }
+//
+//        if(this.nrPersons<o.nrPersons) return -1;
+//        if (this.nrPersons>o.nrPersons) return 1;
+//        return 0;
+
         if(this.lengthInDays<o.lengthInDays) {
-            return 1;
-        } else if(this.lengthInDays>o.lengthInDays) {
             return -1;
-        }  else {
-            if(this.nrPersons<o.nrPersons) return -1;
-            else if (this.nrPersons>o.nrPersons) return 1;
-            else return 0;
-        }
+        } else if(this.lengthInDays>o.lengthInDays) {
+            return 1;
+        } else if(this.nrPersons<o.nrPersons) return -1;
+        else if (this.nrPersons>o.nrPersons) return 1;
+        else return 0;
     }
 
 }

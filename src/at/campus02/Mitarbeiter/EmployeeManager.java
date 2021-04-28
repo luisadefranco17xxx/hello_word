@@ -25,8 +25,7 @@ public class EmployeeManager {
         double gesamtGehatl=0;
         for (Mitarbeiter m: empList
              ) {
-            //m.getFullSalary();
-            //m.getDepartment();
+
             if(myHash.get(m.getDepartment())!=null )
             gesamtGehatl=myHash.get(m.getDepartment());
 
@@ -34,5 +33,4 @@ public class EmployeeManager {
         }
         return myHash;
     }
-
 }

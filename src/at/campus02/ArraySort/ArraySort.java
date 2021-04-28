@@ -30,23 +30,30 @@ public class ArraySort {
         dogList.add(new Dog("red",120));
         System.out.println("dogList = " + dogList);
         Collections.sort(dogList);
-        System.out.println("dogList nac sortire = " + dogList);   // utiliziamo collection invece di
+        System.out.println("dogList nach Sortierung = " + dogList);   // utiliziamo collection invece di
 
 
 
         Holiday summerHoliday = new Holiday("Österreich", 7, 4);
-        Holiday winterHoliday = new Holiday("Österreich", 2, 4);
-        Holiday winterHoliday2 = new Holiday("Österreich", 2, 12);
-        Holiday defaultHoliday = new Holiday("Österreich", 2, 42);
+        Holiday winterHoliday = new Holiday("Australia", 2, 4);
+        Holiday winterHoliday2 = new Holiday("Italia", 2, 12);
+        Holiday defaultHoliday = new Holiday("Russland", 2, 42);
         ArrayList<Holiday> myH=new ArrayList<>();
         myH.add(summerHoliday);
         myH.add(winterHoliday);
         myH.add(winterHoliday2);
         myH.add(defaultHoliday);
         System.out.println(myH);
-        Collections.sort(myH);
-        System.out.println(" nach sortierung= " );
-        System.out.println(myH);
+        System.out.println(" *************************************** " );
+        //Collections.sort(myH);
+
+        //System.out.println(" nach Sortierung= " );
+        //System.out.println(myH);
+        Collections.sort(myH,new IdComparatorASC());
+        for (Holiday h: myH
+             ) {
+            System.out.println(h);
+        }
 
     }
 }
