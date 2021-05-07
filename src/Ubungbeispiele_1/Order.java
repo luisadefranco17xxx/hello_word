@@ -1,11 +1,11 @@
-package Ubungbeispiele;
+package Ubungbeispiele_1;
 
 import java.util.Arrays;
 
 public class Order {
     private int nrArticles=0;
     private int capacityOrder;
-    private  Article[] articles;
+    private  Article[] articles =new Article[capacityOrder];
 
 
    public Order(int nrArticles,int capacityOrder, Article[] articles){
@@ -50,14 +50,15 @@ public class Order {
                 '}';*/
     }
 
-    public void addArticle(Article a){                           //TODO     sicher falsch gelöst!!!
-       Article[] newArticles =new Article[this.articles.length+1];
-        for (int i = 0; i < articles.length; i++) {
-            newArticles[i]=this.articles[i];
-        }
-        newArticles[this.articles.length]=a;
-        this.articles=newArticles;
-        this.capacityOrder++;
+    public void addArticle(Article a){
+       if(nrArticles==capacityOrder)
+       {
+           System.out.println("Not possible: max capacity order erreicht");}
+       else {
+           this.articles[nrArticles]=a;
+           this.nrArticles++;
+       }
+
     }
 
      public int findMostExpensiveArticle(){
@@ -114,6 +115,19 @@ public class Order {
         this.capacityOrder++;
     }
 
+    public void removeArticle(int nr){
+        for (int i = 0; i < articles.length; i++) {
+            if(this.articles[i].number==Integer.toString(nr)) {
+                this.articles=null;
+                for (int j = i; j < articles.length-1; j++) {
+                    articles[i]=articles[i+1];
+                }
+                break;
+            };
+            break;
+        };
+        this.capacityOrder++;
+    }
 
 
     @Override

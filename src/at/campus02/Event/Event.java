@@ -5,6 +5,11 @@ public class Event {
     private String Ort;
     private Double Eintrittspreis;
 
+    public Event(String title, String ort, Double eintrittspreis) {
+        Title = title;
+        Ort = ort;
+        Eintrittspreis = eintrittspreis;
+    }
 
     public String getTitle() {
         return Title;

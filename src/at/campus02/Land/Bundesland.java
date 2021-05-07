@@ -6,7 +6,7 @@ public class Bundesland extends Land{
     public Bundesland(double bruttoSozialProdukt) {
         this.bruttoSozialProdukt =bruttoSozialProdukt ;
     }
-
+    @Override
     public double getBruttoSozialProdukt() {
         return bruttoSozialProdukt;
     }

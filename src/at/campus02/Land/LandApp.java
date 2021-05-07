@@ -10,6 +10,7 @@ public class LandApp {
 
      Bundesstaat myStaat=new Bundesstaat();
      myStaat.addLand(my1);
-        myStaat.addLand(my2);
-        System.out.println("myStaat.getBruttoSozialProdukt() = " + myStaat.getBruttoSozialProdukt()); }
+     myStaat.addLand(my2);
+     System.out.println("myStaat.getBruttoSozialProdukt() = " + myStaat.getBruttoSozialProdukt());
+         }
 }

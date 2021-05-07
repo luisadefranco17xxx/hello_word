@@ -1,13 +1,14 @@
 package at.campus02.Event;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class EventKalender {
 
     private ArrayList<Event> myEventList =new ArrayList<>();
 
     public void add(ArrayList<Event> myListToAdd){
-        for (Event e:myEventList
+        for (Event e:myListToAdd
              ) {
             myEventList.add(e);
         }
@@ -55,19 +56,28 @@ public class EventKalender {
         int count=0;
         for (Event e:myEventList
         ) {
-            value+=e.getEintrittspreis();
-            count++;
+            if(ort==e.getOrt()) {
+                value += e.getEintrittspreis();
+                count++;
+            }
         }
         return value/count;
     }
-   /* public HashMap<String, Integer> getCountEventsByOrt(){
-        HashMap<String, Integer> myMap
+   public HashMap<String, Integer> getCountEventsByOrt() {
+       HashMap<String, Integer> myMap=new HashMap<>();
+       for (Event e : myEventList
+       ) {
+           myMap.put(e.getOrt(),myMap.getOrDefault(e.getOrt(),0)+1);
+       }
+       return myMap;
+   }
 
-        int count=0;
-
-        for (Event e:myEventList
+    public HashMap<String, Double> getSumPriceEventsByOrt(){
+        HashMap<String, Double> myMap=new HashMap<>();
+        for (Event e : myEventList
         ) {
-          count++;
+            myMap.put(e.getOrt(),myMap.getOrDefault(e.getOrt(),0.0)+e.getEintrittspreis());
+        }
+        return myMap;
     }
-        return value/count;*/
 }

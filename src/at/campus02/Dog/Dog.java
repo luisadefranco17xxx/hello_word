@@ -27,7 +27,7 @@ public class Dog implements Comparable<Dog>{
     @Override
     public int compareTo(Dog o) {
         if(this.weight < o.weight) return -1;
-        if(this.weight < o.weight) return 1;
+        if(this.weight > o.weight) return 1;
         return 0;    //supponiamo stesso peso
     }
 

@@ -20,5 +20,25 @@ public class KontoApp {
         System.out.println("  =>  kontostand " + myGiro.getKontostand());
         myGiro.einzahlen(30000);
         System.out.println("  =>  kontostand " + myGiro.getKontostand());   //ich habe noch den buchungslimit !!!
+
+        GiroKonto myEchteGiro=new GiroKonto("Johanna",0); //sie ist arbeitlos
+        System.out.println("  =>  kontostand echte girokonto " + myEchteGiro.getKontostand());
+        System.out.print("  eizahlen 30000 =>  wert " );
+        myEchteGiro.einzahlen(30000);
+        System.out.println("  =>  kontostand " + myEchteGiro.getKontostand());
+        myEchteGiro.einzahlen(30000);
+        System.out.println("  =>  kontostand " + myEchteGiro.getKontostand());
+
+
+
+        SparKonto mySpar=new SparKonto("Lucrezia"); //sie ist arbeitlos
+        System.out.println("  =>  kontostand spar girokonto " + mySpar.getKontostand());
+        System.out.print("  eizahlen 30000 =>  wert " );
+        mySpar.einzahlen(30000);
+        System.out.println("  =>  kontostand " + mySpar.getKontostand());
+        mySpar.einzahlen(30000);
+        System.out.println("  =>  kontostand " + mySpar.getKontostand());
+        mySpar.auszahlen(80000);
+        System.out.println("  =>  kontostand " + mySpar.getKontostand());
     }
 }

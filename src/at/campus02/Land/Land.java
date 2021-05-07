@@ -1,5 +1,9 @@
 package at.campus02.Land;
 
 public class  Land {
-    public double  bruttoSozialProdukt(){return bruttoSozialProdukt();}
+    private double  bruttoSozialProdukt;
+
+    public double  getBruttoSozialProdukt(){
+        return bruttoSozialProdukt;
+    }
 }

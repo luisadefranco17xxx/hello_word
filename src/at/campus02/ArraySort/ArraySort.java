@@ -5,11 +5,12 @@ import at.campus02.Dog.Dog;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
 
 public class ArraySort {
     public static void main(String[] args) {
         double [] darr2={4,65.5,666.9999,44,5,0.0002};
-        String  [] darr={"e","r"};
+        String  [] darr={"ze","r"};
 
         //fast way to print array
         System.out.println(Arrays.toString(darr));
@@ -18,19 +19,19 @@ public class ArraySort {
         System.out.println(Arrays.toString(darr));
 
         Dog[] dogs={new Dog("brown",10), new Dog("rot",2), new Dog("gelb",5), new Dog("yy",1)};
-        System.out.println("dogs = " + Arrays.toString(dogs));
+        System.out.println("dogs wie Dog[]= " + Arrays.toString(dogs));
         Arrays.sort(dogs);
-        System.out.println("dogs = " + Arrays.toString(dogs));
+        System.out.println("dogs wie Dog[] sortiert = " + Arrays.toString(dogs));
         // same thing for List(arrayList)
-        System.out.println("fdgfdgfd");
+        System.out.println("*********************************");
         ArrayList<Dog> dogList=new ArrayList<>();
         dogList.add(new Dog("brown",10));
         dogList.add(new Dog("gree",2));
         dogList.add(new Dog("brown",1440));
         dogList.add(new Dog("red",120));
-        System.out.println("dogList = " + dogList);
+        System.out.println("dogList wie ArrayList<Dog> vor sortierung = " + dogList);
         Collections.sort(dogList);
-        System.out.println("dogList nach Sortierung = " + dogList);   // utiliziamo collection invece di
+        System.out.println("dogList wie ArrayList<Dog> nach Sortierung = " + dogList);   // utiliziamo collection invece di
 
 
 
@@ -45,7 +46,7 @@ public class ArraySort {
         myH.add(defaultHoliday);
         System.out.println(myH);
         System.out.println(" *************************************** " );
-        //Collections.sort(myH);
+        Collections.sort(myH);
 
         //System.out.println(" nach Sortierung= " );
         //System.out.println(myH);
@@ -54,6 +55,7 @@ public class ArraySort {
              ) {
             System.out.println(h);
         }
+        System.out.println(" *************************************** " );
 
     }
 }

@@ -1,6 +1,4 @@
-package Ubungbeispiele;
-
-import java.util.Arrays;
+package Ubungbeispiele_1;
 
 public class OrderApp {
     public static void main(String[] args) {
@@ -17,15 +15,17 @@ public class OrderApp {
 
         Order order1=new Order(3,3,articlesArray);
 
-       // order1.setCapacityOrder(3);
-       // order1.setArticles(articlesArray);
-
         System.out.println("order1 = " + order1);
-        //System.out.println("get = " + order1.getCapacityOrder());
 
-           order1.addArticle(article4);
+        order1.increaseArray();
+        order1.addArticle(article4);
         System.out.println("order1 dopo aggiunta articolo 4 = " + order1);
 
-        //order1.print();
+        order1.print();
+        System.out.println(order1.calculateTax());
+        System.out.println(order1.sumOrder());
+        System.out.println(order1.sumOrderWithTax());
+        System.out.println(order1.findMostExpensiveArticle());
+        System.out.println(order1.findMostExpensiveOrderPosition());
     }
 }

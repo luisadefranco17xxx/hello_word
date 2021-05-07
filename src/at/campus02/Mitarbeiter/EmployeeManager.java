@@ -12,6 +12,10 @@ public class EmployeeManager {
         this.empList = empList;
     }
 
+    public void addEmployee(Mitarbeiter m) {
+        empList.add(m);
+    }
+
     public double calcTotalSalary(){
         double sum=0;
         for (int i = 0; i < empList.size(); i++) {
@@ -32,5 +36,12 @@ public class EmployeeManager {
             myHash.put(m.getDepartment(),gesamtGehatl+m.getFullSalary());
         }
         return myHash;
+    }
+
+    @Override
+    public String toString() {
+        return "EmployeeManager{" +
+                "empList=" + empList +
+                '}';
     }
 }

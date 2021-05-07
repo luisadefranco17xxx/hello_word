@@ -1,4 +1,4 @@
-package Ubungbeispiele;
+package Ubungbeispiele_1;
 
 public class Article {
     String name;
